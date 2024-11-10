@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Generator</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CV Generator</h1>
+    <div class="form-section">
+      <h2>Enter Your Details</h2>
+      <form id="cvForm">
+        <div class="form-column">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="John Doe" required>
+
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="Software Developer" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="example@example.com" required>
+
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" placeholder="+1 123-456-7890" required>
+
+          <label for="skills">Skills (comma-separated)</label>
+          <input type="text" id="skills" placeholder="JavaScript, HTML, CSS, React">
+        </div>
+
+        <div class="form-column">
+          <label for="profilePic">Profile Picture</label>
+          <input type="file" id="profilePic" accept="image/*">
+
+          <label for="summary">Summary</label>
+          <textarea id="summary" placeholder="A brief overview of your professional experience and goals"></textarea>
+
+          <label for="about">About Me</label>
+          <textarea id="about" placeholder="A detailed description about yourself"></textarea>
+
+          <label for="experience">Experience</label>
+          <textarea id="experience" placeholder="List your work experience, one job per line"></textarea>
+
+          <label for="education">Education</label>
+          <textarea id="education" placeholder="List your educational background"></textarea>
+        </div>
+        
+        <button type="button" onclick="generateCV()">Generate CV</button>
+      </form>
+    </div>
+
+    <div id="cvDisplay" class="cv-display">
+      <button onclick="downloadCV()">Download CV</button>
+      <div id="cvContent" class="cv-template"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
